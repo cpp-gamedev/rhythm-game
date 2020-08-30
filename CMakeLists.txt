@@ -11,7 +11,7 @@ endif()
 set(BUILD_CONFIG Debug)
 set(CMAKE_BUILD_TYPE ${BUILD_CONFIG})
 set(NAME rhtyhm-game)
-set(SFML_VERSIN 2.5.1)
+set(SFML_VERSION 2.5.1)
 project(${NAME})
 
 find_package(SFML ${SFML_VERSION} COMPONENTS graphics REQUIRED)
