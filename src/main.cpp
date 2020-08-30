@@ -2,44 +2,43 @@
 
 namespace
 {
-	constexpr float g_PlayerSpeed{15.f};
-	constexpr float g_RotationAngle{10.f};
+constexpr float g_PlayerSpeed{15.f};
+constexpr float g_RotationAngle{10.f};
 
-	sf::RectangleShape rectangle(sf::Vector2f{50.f, 50.f});
+sf::RectangleShape rectangle(sf::Vector2f{50.f, 50.f});
 
-	void handleInput()
+void handleInput()
+{
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
 	{
-
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
-		{
-			rectangle.move(-g_PlayerSpeed, 0.f);
-		}
-
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
-		{
-			rectangle.move(0.f, g_PlayerSpeed);
-		}
-
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
-		{
-			rectangle.move(g_PlayerSpeed, 0.f);
-		}
-
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
-		{
-			rectangle.move(0.f, -g_PlayerSpeed);
-		}
-
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q))
-		{
-			rectangle.rotate(g_RotationAngle);
-		}
-
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::E))
-		{
-			rectangle.rotate(-g_RotationAngle);
-		}
+		rectangle.move(-g_PlayerSpeed, 0.f);
 	}
+
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
+	{
+		rectangle.move(0.f, g_PlayerSpeed);
+	}
+
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+	{
+		rectangle.move(g_PlayerSpeed, 0.f);
+	}
+
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
+	{
+		rectangle.move(0.f, -g_PlayerSpeed);
+	}
+
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q))
+	{
+		rectangle.rotate(g_RotationAngle);
+	}
+
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::E))
+	{
+		rectangle.rotate(-g_RotationAngle);
+	}
+}
 } // namespace
 
 int main()
