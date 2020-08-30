@@ -1,1 +1,1 @@
-# rhythm-game
+# Rhythm Game Project
